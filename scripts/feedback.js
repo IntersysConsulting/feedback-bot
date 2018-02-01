@@ -5,7 +5,7 @@ module.exports = function(robot) {
         robot.messageRoom('G91QEK883',  `@here Hi leadership team i received new feedback: ${feedback}`);
     });
 
-    robot.hear(/mexico/i,function(msg){
+    robot.hear(/(mexico || México || Mexico)/i,function(msg){
         msg.send('mexico rocks');
     });
 }
