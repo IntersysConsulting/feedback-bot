@@ -1,7 +1,4 @@
 const fs  = require('fs');
-const github = require('./utils/github');
-const slack = require('./utils/slack');
-// const brain = require('./utils/brain');
 const json = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
 module.exports = function(robot) {
