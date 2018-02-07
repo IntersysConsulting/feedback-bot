@@ -5,13 +5,13 @@ const slack = require('./utils/slack');
 const json = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
 module.exports = function(robot) {
-    robot.respond(/ (feedback|f|queja) (.*)/i, msg => {
+    robot.respond(/(feedback|f|queja) (.*)/i, msg => {
         const feedback = msg.match[2];
         robot.brain.set(msg.message.user.id, feedback);
         msg.reply(`This is your feedback: ${feedback}, are you ok? y/n`);
     });
 
-    robot.respond(/(y|Yes|Y|yes)/i, msg => {
+    robot.respond(/(y|yes)/i, msg => {
         const feedback = robot.brain.get(msg.message.user.id);
         if (!feedback) {
             msg.reply('Emmmmm ok...');
@@ -22,7 +22,7 @@ module.exports = function(robot) {
         robot.brain.set(msg.message.user.id, null);
     });
 
-    robot.respond(/(n|No|N|no)/i, msg => {
+    robot.respond(/(n|no)/i, msg => {
         const feedback = robot.brain.get(msg.message.user.id);
         if (!feedback) {
             msg.reply('Emmmmm ok...');
