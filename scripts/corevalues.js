@@ -130,13 +130,13 @@ module.exports = function(robot) {
 };
 
 const createObject = (robot,msg) => {
-    const nominated = robot.brain.get(`${msg.message.user.id}-name`);
-    const value = robot.brain.get(`${msg.message.user.id}-value`);
-    const reason = robot.brain.get(`${msg.message.user.id}-reason`);
-    const manager = robot.brain.get(`${msg.message.user.id}-manager`);
-    const location = robot.brain.get(`${msg.message.user.id}-location`);
-    const userName = msg.message.user.name;
-    const userManager = robot.brain.get(`${msg.message.user.id}-ymanager`);
-    const userLocation = robot.brain.get(`${msg.message.user.id}-ylocation`);
+    const nominated = robot.brain.get(`${msg.message.user.id}-name`),
+        value = robot.brain.get(`${msg.message.user.id}-value`),
+        reason = robot.brain.get(`${msg.message.user.id}-reason`),
+        manager = robot.brain.get(`${msg.message.user.id}-manager`),
+        location = robot.brain.get(`${msg.message.user.id}-location`),
+        userName = msg.message.user.name,
+        userManager = robot.brain.get(`${msg.message.user.id}-ymanager`),
+        userLocation = robot.brain.get(`${msg.message.user.id}-ylocation`);
     return object = { nominated, value, reason, manager, location, userName, userManager, userLocation }
 }
