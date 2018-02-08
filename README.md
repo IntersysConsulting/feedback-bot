@@ -4,16 +4,18 @@ change the name of the file config-tamplate.json by config.json
 
 Fill the informarion required in the JSON (roomId)
 
-In power shell run this commands (adding your slack token):
+In [`hubot.cmd`](bin/hubot.cmd) file, please fill the **HUBOT_SLACK_TOKEN** with your slack token:
 
+```
+SET HUBOT_SLACK_TOKEN=00000-00000-000-000000-000000
+```
+
+And if you want to run it on powershell just run the next command:
 ```powershell
-[Environment]::SetEnvironmentVariable("HUBOT_ADAPTER", "slack")
-[Environment]::SetEnvironmentVariable("HUBOT_SLACK_TOKEN", "")
-
 bin/hubot
 ```
 
-Run with Docker 
+Or if you want to use docker:
 
 Build
 ```powershell
