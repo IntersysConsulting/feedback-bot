@@ -26,3 +26,8 @@ Run
 ```powershell
 docker run -it --rm -p 8081:8080 --env HUBOT_SLACK_TOKEN="Slack Token" hubot
 ```
+
+If you want to use a volume just run:
+```powershell
+docker run -it --rm -p 8081:8080 -v $pwd/scripts:/app/scripts --env HUBOT_SLACK_TOKEN="Slack Token" hubot
+```
