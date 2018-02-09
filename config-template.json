@@ -2,5 +2,10 @@
     "roomId": "",
     "ghToken": "",
     "apiGHUrl": "",
-    "issueUrl": ""
+    "issueUrl": "",
+    "mongoUrl": "",
+    "mongoDb": "",
+    "mongoCollection": "",
+    "mongoUser": "",
+    "mongoPass": ""
 }
